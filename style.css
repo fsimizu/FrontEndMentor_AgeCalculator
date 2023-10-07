@@ -1,0 +1,156 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    /* Primary */
+    --purple: hsl(259, 100%, 65%);
+    --lightRed: hsl(0, 100%, 67%);
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --offWhite: hsl(0, 0%, 94%);
+    --lightGrey: hsl(0, 0%, 86%);
+    --smokeyGrey: hsl(0, 1%, 44%);
+    --offBlack: hsl(0, 0%, 8%);
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--offWhite);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form_container {
+    width: 300px;
+    background-color: var(--white);
+    border-radius: 24px;
+    border-bottom-right-radius: 100px;
+    padding: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input_boxes {
+    display: flex;
+}
+
+.input_box {
+    width: 100px;
+}
+
+.input_box input {
+    width: 60%;
+}
+
+.input_box label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--smokeyGrey);
+    letter-spacing: 3px;
+}
+
+.input_box input {
+    border-radius: 5px;
+    height: 16px;
+    border: 2px solid var(--lightGrey);
+    padding: 12px;
+    margin-top: 3px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+input:out-of-range{
+    border: 1px solid red;
+}
+
+
+.input_box input:hover {
+    cursor: pointer;
+}
+
+.input_box input::-webkit-outer-spin-button,
+.input_box input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.calculate {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.calculate hr {
+    position: relative;
+    top: 30px;
+    border: none;
+    border-bottom: 2px solid var(--lightGrey);
+    z-index: 1;
+}
+
+.calculate input {
+    background-color: var(--purple);
+    border-radius: 50%;
+    padding: 15px;
+    height: 24px;
+    z-index: 2;
+    position: relative;
+}
+
+.calculate input:hover {
+    background-color: var(--offBlack);
+}
+
+.calculate img:hover {
+    cursor: pointer;
+}
+
+.result {
+    color: var(--offBlack);
+    font-weight: 900;
+    font-style: italic;
+    font-size: 48px;
+    line-height: 50px;
+}
+
+.result_number {
+    color: var(--purple);
+
+}
+
+.result_text {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.attribution {
+    margin-top: 10px;
+}
+
+@media (min-width: 992px) {
+
+    .form_container {
+        width: 500px;
+        padding: 34px;
+    }
+    .input_box {
+        width: 130px;
+    }
+    .calculate {
+        text-align: right;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .result {
+        font-size: 64px;
+        line-height: 68px;
+    }
+}
